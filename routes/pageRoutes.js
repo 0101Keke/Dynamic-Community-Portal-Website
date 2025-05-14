@@ -2,11 +2,12 @@
 
 const express = require('express');
 const router = express.Router();
+const eventsData = require('../public/Scripts/Events');
 
 const contactMessages = [];
 
 router.get('/', (req, res) => {
-    const data = {title: 'home'};
+    const data = {title: 'home', events: eventsData};
     res.render('Pages/home',data);
 });
 
@@ -17,7 +18,7 @@ router.get('/about', (req, res) => {
 });
 
 router.get('/events', (req, res) => {
-    const data = {title: 'events'};
+    const data = {title: 'events', events: eventsData};
     res.render('pages/events',data);
 });
 
@@ -26,15 +27,17 @@ router.get('/contact', (req, res) => {
     res.render('pages/contact',data);
 });
 
+router.post('/contact', (req, res) => {
+    const {name, email, message} = req.body;
+    contactMessages.push({name, email, message});
+    res.redirect('/thankyou');
+});
+
 router.get('/thankyou', (req, res) => {
     const data = {title: 'thankyou'};
     res.render('pages/thankyou',data);
 });
 
-router.post('contact', (req, res) => {
-    const {name, email, message} = req.body;
-    contactMessages.push({name, email, message});
-    res.redirect('/thankyou');
-});
+
 
 module.exports = router;
