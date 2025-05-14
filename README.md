@@ -9,9 +9,9 @@ The team developed a dynamic web platform using Node.js, Express.js, and EJS for
 
 ## Technologies Used
 
-- Node.js (v18+)
-- Express.js (v4+)
-- EJS (v3+)
+- Node.js 
+- Express.js 
+- EJS 
 - CSS 
 - Git & GitHub
 - Nodemon
