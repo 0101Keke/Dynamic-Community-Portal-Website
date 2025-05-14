@@ -6,52 +6,66 @@
 <div class="container">
   <h1>Welcome to Our Community</h1>
   <p>We bring people together through engaging events and stories.</p>
- 
-  <table>
+ <section id="Games">
+  <script>
+    const topGames = [
+      { name: "The Slormancer", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "3548" },
+      { name: "Black Mesa", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/362890/header.jpg", maxPlayers: "4369" },
+      { name: "Digimon World: Next Order", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "718" },
+      { name: "God Of Weapons", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "2020" },
+      { name: "Siralim Ultimate", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "429" }
+    ];
+  
+    let tableTrending = 
+      `
+      <table>
+        <tr>
+          <th>Trending Games</th>
+          <th>Image</th>
+          <th>Dayle Peak of players</th>
+        </tr>
+        `;
+  
+    topGames.forEach(game => {
+      tableTrending += `
+        <tr>
+          <td>
+            ${game.name}
+          </td>
+          <td>
+            <img src="${game.imageUrl}" alt="${game.name}" width="100">
+          </td>
+          <td>
+            ${game.maxPlayers}
+          </td>
+        </tr>
+      `;
+    });
+  
+    tableTrending += `
+      </table>
+    `;
+  
+    document.write(tableTrending);
+  </script>
+
+  <table id ="top-games">
+    <th>Top Games by Player Base</th>
     <tr>
-      <th>Current Top 5 Games</th>
-    </tr>
-    <tr>
-      <td>
-        The Slormancer
-      </td>
-      <td>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg" alt="The Slormancer">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Black Mesa
-      </td>
-      <td>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/362890/header.jpg" alt="Black Mesa">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Digimon World: Next Order
-      </td>
-      <td>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg" alt="Digimon World: Next Order">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        God Of Weapons
-      </td>
-      <td>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg" alt="God Of Weapons">
-      </td>
-    </tr>
-    <tr>
-      <td>
-        Siralim Ultimate
-      </td>
-      <td>
-        <img src="https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg" alt="Siralim Ultimate">
-      </td>
+      <ol>
+        <li>Counter-Strike 2</li>
+        <li>Dota 2</li>
+        <li>PUBG</li>
+        <li>Bongo Cat</li>
+        <li>Apex Legends</li>
+        <li>Banana</li>
+        <li>Delta Force</li>
+        <li>Rust</li>
+        <li>NARAKA: BLADEPOINT</li>
+      </ol>
     </tr>
   </table>
+</section>
   <section>
     <h2>Upcoming Events</h2>
     <% if (events && events.length > 0) { %>
