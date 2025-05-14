@@ -3,6 +3,8 @@
 const express = require('express');
 const router = express.Router();
 
+const contactMessages = [];
+
 router.get('/', (req, res) => {
     const data = {title: 'home'};
     res.render('Pages/home',data);
@@ -27,6 +29,12 @@ router.get('/contact', (req, res) => {
 router.get('/thankyou', (req, res) => {
     const data = {title: 'thankyou'};
     res.render('pages/thankyou',data);
+});
+
+router.post('contact', (req, res) => {
+    const {name, email, message} = req.body;
+    contactMessages.push({name, email, message});
+    res.redirect('/thankyou');
 });
 
 module.exports = router;
