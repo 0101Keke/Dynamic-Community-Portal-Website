@@ -31,16 +31,16 @@ The team developed a dynamic web platform using Node.js, Express.js, and EJS for
 ## Core Features
 
 - Top Game Display  
-  Displays the current top game(s) with title, image, description, and a tag showing why it’s trending.
+  Displays the current top game(s) with title, image, description.
 
-- Game Genre Filtering  
-  Lets users filter and browse games by genres like Action, RPG, Strategy, and more.
+- View Upcoming Events 
+  The view page lets users view the gaming events that are in store for the feature, see their names, lists the catagories available at the event, see the location, and the date.
 
 - Dynamic Data Management  
   Game details (title, genre, platform, etc.) stored in a structured backend array or database.
 
-- "Top Game" Logic  
-  Either automated (e.g., most active players) or curated by administrators.
+- Getting in Touch
+  Users have the ability to enter their deatails and send a message on the website.
 
 ---
 
@@ -75,8 +75,4 @@ Dynamic-Community-Portal-Website/
 ├── README.md       # Project overview
 └── package.json    # Project metadata and dependencies
 ```
-## Screenshots
-(homepage, ect)
 
-## Reflection
-(after we're done)
