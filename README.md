@@ -20,11 +20,11 @@ The team developed a dynamic web platform using Node.js, Express.js, and EJS for
 
 ## Team Members and Roles
 
-- Kekeletso Maleka – Team Lead  
-- Kekeletso Maleka – Backend Developer  
-- Busisiwe Radebe – Frontend Developer  
-- Neil Juan Nothnagel – Data Manager  
-- Francois Myburg – Documentation Manager  
+- Kekeletso Maleka 601439 – Team Lead  
+- Kekeletso Maleka 601439 – Backend Developer  
+- Busisiwe Radebe 601255 – Frontend Developer  
+- Neil Juan Nothnagel 578121 – Data Manager  
+- Francois Myburg 600576 – Documentation Manager  
 
 ---
 
