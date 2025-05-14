@@ -1,19 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+
 <h1>Welcome to the Community Portal</h1>
 
-<%- include('partials/header', { title: 'Home' }) %>
-<%- include('partials/navbar') %>
 
+,<script src="/home.js"></script>
 <div class="container">
   <h1>Welcome to Our Community</h1>
   <p>We bring people together through engaging events and stories.</p>
  <section id="Games">
   <script>
     const topGames = [
-      { name: "The Slormancer", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "3548" },
-      { name: "Black Mesa", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/362890/header.jpg", maxPlayers: "4369" },
-      { name: "Digimon World: Next Order", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "718" },
-      { name: "God Of Weapons", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "2020" },
-      { name: "Siralim Ultimate", imageUrl: "https://cdn.cloudflare.steamstatic.com/steam/apps/1000000/header.jpg", maxPlayers: "429" }
+      { name: "The Slormancer",src: "/images/The Slormancer.png", maxPlayers: "3548" },
+      { name: "Black Mesa",src: "/images/Black Mesa.jpg", maxPlayers: "4369" },
+      { name: "Digimon World: Next Order",src: "/images/Digimon.jpg", maxPlayers: "718" },
+      { name: "God Of Weapons",src: "/images/God Of Weapons.jpg", maxPlayers: "2020" },
+      { name: "Siralim Ultimate",src: "/images/Siralim Ultimate.jpg", maxPlayers: "429" }
     ];
   
     let tableTrending = 
@@ -82,3 +89,4 @@
 </div>
 
 <%- include('partials/footer') %>
+</html>
