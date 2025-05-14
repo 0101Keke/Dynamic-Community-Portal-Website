@@ -2,13 +2,13 @@
 
 const express = require('express');
 const router = express.Router();
-const eventsData = require('../public/Scripts/Events');
+const eventsData = require('../models/Event');
 
 const contactMessages = [];
 
 router.get('/', (req, res) => {
     const data = {title: 'home', events: eventsData};
-    res.render('Pages/home',data);
+    res.render('pages/home',data);
 });
 
 
@@ -30,7 +30,7 @@ router.get('/contact', (req, res) => {
 router.post('/contact', (req, res) => {
     const {name, email, message} = req.body;
     contactMessages.push({name, email, message});
-    res.redirect('/thankyou');
+    res.redirect('pages/thankyou');
 });
 
 router.get('/thankyou', (req, res) => {
