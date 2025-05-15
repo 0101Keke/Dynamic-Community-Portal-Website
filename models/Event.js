@@ -88,7 +88,7 @@
   ];
 
   // Pass the array to the EJS template
-  const container = document.querySelector('.container');
+  //const container = document.querySelector('.container');
   let eventsHTML = '<h1>Upcoming Gaming Events in South Africa</h1><p>Check out the exciting gaming events happening soon!</p>';
 
   if (upcomingGamingEventsSouthAfrica && upcomingGamingEventsSouthAfrica.length > 0) {
@@ -104,4 +104,4 @@
     eventsHTML += '<p>No upcoming gaming events currently listed.</p>';
   }
 
-  container.innerHTML = eventsHTML;
+  //container.innerHTML = eventsHTML;
