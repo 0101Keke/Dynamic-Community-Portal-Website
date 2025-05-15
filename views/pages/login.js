@@ -1,5 +1,6 @@
 const users = []; // Array to store user accounts
 
+
 function showCreateForm() {
     document.getElementById('login-form').style.display = 'none';
     document.getElementById('create-account-form').style.display = 'block';

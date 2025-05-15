@@ -86,6 +86,7 @@
       dates: "March 10 - 12, 2025"
     }
   ];
+  
 
   // Pass the array to the EJS template
   const container = document.querySelector('.container');
