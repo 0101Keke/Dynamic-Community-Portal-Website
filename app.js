@@ -13,6 +13,11 @@ app.use(express.urlencoded({extended: false}));
 
 app.use("/", pageRoutes);
 
+app.use((req,res)=>{
+  res.status(404).send("Page Not Found")
+});
+
+const port = 3000;
 app.listen(port, () => {
   console.log(`Server running on http://localhost:${port}`);
 });
