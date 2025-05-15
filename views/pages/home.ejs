@@ -1,12 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home</title>
+</head>
+
 <h1>Welcome to the Community Portal</h1>
 
-<%- include('partials/header', { title: 'Home' }) %>
-<%- include('partials/navbar') %>
 
+,<!--<script src="/models/Event.js"></script>-->
 <div class="container">
   <h1>Welcome to Our Community</h1>
   <p>We bring people together through engaging events and stories.</p>
+ <section id="Games">
+  <script>
+    const topGames = [
+      { name: "The Slormancer",src: "/images/The Slormancer.png", maxPlayers: "3548" },
+      { name: "Black Mesa",src: "/images/Black Mesa.jpg", maxPlayers: "4369" },
+      { name: "Digimon World: Next Order",src: "/images/Digimon.jpg", maxPlayers: "718" },
+      { name: "God Of Weapons",src: "/images/God Of Weapons.jpg", maxPlayers: "2020" },
+      { name: "Siralim Ultimate",src: "/images/Siralim Ultimate.jpg", maxPlayers: "429" }
+    ];
+  
+    let tableTrending = 
+      `
+      <table>
+        <tr>
+          <th>Trending Games</th>
+          <th>Image</th>
+          <th>Dayle Peak of players</th>
+        </tr>
+        `;
+  
+    topGames.forEach(game => {
+      tableTrending += `
+        <tr>
+          <td>
+            ${game.name}
+          </td>
+          <td>
+            <img src="${game.src}" alt="${game.name}" width="100">
+          </td>
+          <td>
+            ${game.maxPlayers}
+          </td>
+        </tr>
+      `;
+    });
+  
+    tableTrending += `
+      </table>
+    `;
+  
+    document.write(tableTrending);
+  </script>
 
+  <table id ="top-games">
+    <th>Top Games by Player Base</th>
+    <tr>
+      <ol>
+        <li>Counter-Strike 2</li>
+        <li>Dota 2</li>
+        <li>PUBG</li>
+        <li>Bongo Cat</li>
+        <li>Apex Legends</li>
+        <li>Banana</li>
+        <li>Delta Force</li>
+        <li>Rust</li>
+        <li>NARAKA: BLADEPOINT</li>
+      </ol>
+    </tr>
+  </table>
+</section>
   <section>
     <h2>Upcoming Events</h2>
     <% if (events && events.length > 0) { %>
@@ -23,3 +89,4 @@
 </div>
 
 <%- include('partials/footer') %>
+</html>
