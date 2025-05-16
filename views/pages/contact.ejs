@@ -5,6 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contacts</title>
 </head>
+<%- include('../partials/header', { title: 'Home' }) %>
 <body>
 
   <h1>Contact Us</h1>
@@ -14,6 +15,6 @@
   <textarea name="message" placeholder="Your Message" required></textarea><br />
   <button type="submit">Send</button>
 </form>
-
+<%- include('../partials/footer') %>
 </body>
 </html>

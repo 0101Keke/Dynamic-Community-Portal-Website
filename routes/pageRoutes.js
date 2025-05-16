@@ -30,7 +30,12 @@ router.get('/contact', (req, res) => {
 router.post('/contact', (req, res) => {
     const {name, email, message} = req.body;
     contactMessages.push({name, email, message});
-    res.redirect('pages/thankyou');
+    res.redirect('/thankyou');
+});
+
+router.get('/login', (req, res) => {
+    const data = {title: 'login'};
+    res.render('pages/login', data);
 });
 
 router.get('/thankyou', (req, res) => {
