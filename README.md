@@ -48,10 +48,13 @@ The team developed a dynamic web platform using Node.js, Express.js, and EJS for
 
 To run the project locally:
 
-1. Clone the repository:
+1.Either:
+ -Clone the repository:
    ```bash
    git clone https://github.com/0101Keke/Dynamic-Community-Portal-Website.git
    cd Dynamic-Community-Portal-Website
+   ```
+-Unzip the folder and open it in Visual Studio Code
 
 2. Install dependencies:
    ```bash
